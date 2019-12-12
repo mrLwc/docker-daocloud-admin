@@ -11,7 +11,6 @@ EXPOSE 80
 
 RUN npm install \
     && npm run build \ 
-    && cp -r dist/* /var/www/html \
-    # && rm -rf /app
+    && cp -r dist/* /var/www/html
 
 CMD ["nginx","-g","daemon off;"]
