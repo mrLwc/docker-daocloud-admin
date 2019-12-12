@@ -1,6 +1,7 @@
 FROM node:12.13.1
 
-RUN yum install -y nginx
+RUN apt-get update \
+    && apt-get install -y nginx
 
 WORKDIR /app
 
